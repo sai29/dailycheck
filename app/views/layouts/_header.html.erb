@@ -1,0 +1,21 @@
+<div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right" role="tablist">
+        	<% if signed_in? %>
+         	<li role="presentation" class="active"><%= link_to "Create Team",  new_team_member_path %> </li>
+          <li role="presentation" class="active"><%= link_to "Team List",  team_members_path %> </li>
+         	<li role="presentation" class="active"><%= link_to "Sign out",destroy_user_session_path, method: :delete %> </li>
+         	<% end %>
+         	<% if !signed_in? %>
+         	<li role="presentation" class="active"><%= link_to "Log in",new_user_session_path %> </li>
+         	<% end %>
+        
+        
+          <li role="presentation"><a href="#">About</a></li>
+          <li role="presentation"><a href="#"></a></li>
+        </ul>
+        <h3 class="text-muted"><%= link_to "Daily Check", root_path %></h3>
+        
+
+      </div>
+    </div>

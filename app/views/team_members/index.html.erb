@@ -1,0 +1,19 @@
+<div class="row">
+
+	<div class="col-md-6 col-md-offset-3">
+<% @team_members.each do |team_member| %>
+
+      
+        <p>Name:  <%= team_member.name %></p>
+        <p>Email: <%= team_member.email %></p>
+        <p><%= link_to "Edit",  edit_team_member_path(team_member) %> </p>
+        <p><%= link_to "Delete",  team_member_path(team_member), method: :delete %> </p>
+        
+<% end %>        
+    
+
+</div>
+</div>
+
+      
+    
