@@ -5,9 +5,9 @@
 
 # Example:
 #
-set :output, "/path/to/my/cron_log.log"
+
 #
-every :thursday, :at => "09:45am" do
+every :thursday, :at => "10:15am" do
 	runner "User.weekly_update"
 end
 
