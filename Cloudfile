@@ -7,11 +7,11 @@ dailycheck:
     app1:
       size: small
       thin: 2
-      clockwork: on
+      whenever: on
       # delayed_job: 1
       # sidekiq: 1
-      
-      # whenever: on
+      # clockwork: on
+       
       # elasticsearch: on
       databases:
         - postgresql
