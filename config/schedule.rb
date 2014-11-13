@@ -7,8 +7,8 @@
 #
 
 #
-every :thursday, :at => "10:15am" do
-	runner "User.weekly_update"
+every :thursday, :at => "10:30am" do
+	runner "User.daily_update"
 end
 
 env :MAILTO, "saiprashanth93@gmail.com"
