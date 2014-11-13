@@ -7,9 +7,11 @@
 #
 set :output, "/path/to/my/cron_log.log"
 #
-every 1.day, :at => '12:30 pm' do
-  runner "User.daily_update"
+every :thursday, :at => "09:45am" do
+	runner "User.weekly_update"
 end
+
+env :MAILTO, "saiprashanth93@gmail.com"
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
 #   runner "MyModel.some_method"
