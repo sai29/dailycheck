@@ -2,7 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-config.autoload_paths += %W(#{config.root}/lib)
+config.autoload_paths << Rails.root.join('lib')
 
 
 # Require the gems listed in Gemfile, including any gems
