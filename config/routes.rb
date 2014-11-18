@@ -1,5 +1,6 @@
 Dailycheck::Application.routes.draw do
   root 'static_pages#home'
+  mount_griddler
   devise_for :users
   resources :team_members
   resources :answers  
