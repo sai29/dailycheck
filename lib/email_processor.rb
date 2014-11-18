@@ -5,7 +5,8 @@ class EmailProcessor
   end
 
   def process
-  	puts @email.from.class
+  	from =  @email.from
+  	puts from.class
   	@team_member = TeamMember.find_by(email: @email.from)	
   	answer = @email.body
   	answer_form = @team_member.answer.build
