@@ -1,7 +1,9 @@
 class AnswersController < ApplicationController
 
 	def index
-		@answers = current_user.team_members.answers
+		@answers = current_user.team_members.each do |team_member|
+			team_member.answer
+		end
 	end
   def new
 
@@ -9,6 +11,6 @@ class AnswersController < ApplicationController
 
   def create
   	@team_member = current_user.team_members.find_by(email: params[:email])	
-  	
+
   end
 end
