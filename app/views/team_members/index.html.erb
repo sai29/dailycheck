@@ -3,7 +3,7 @@
 	<div class="col-md-6 col-md-offset-3">
 <% @team_members.each do |team_member| %>
 
-      
+       <%= render 'shared/error_messages', object: team_member.object %>
         <p>Name:  <%= team_member.name %></p>
         <p>Email: <%= team_member.email %></p>
         <p><%= link_to "Edit",  edit_team_member_path(team_member) %> </p>

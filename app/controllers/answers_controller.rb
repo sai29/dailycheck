@@ -9,5 +9,6 @@ class AnswersController < ApplicationController
 
   def create
   	@team_member = current_user.team_members.find_by(email: params[:email])	
+  	
   end
 end

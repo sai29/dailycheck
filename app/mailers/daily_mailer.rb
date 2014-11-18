@@ -1,5 +1,5 @@
 class DailyMailer < ActionMailer::Base
-  default from: "dailycheck@sendgrid.me"
+  default from: "progress@dailycheck.co"
 
 
   def daily_mail(email)

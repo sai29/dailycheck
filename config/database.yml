@@ -1,20 +1,20 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: mailcheck_development
+  database: dailycheck1_development
   host: localhost
   pool: 5
-  username: sairails
-  password: randomwalk893
+  username: dailycheck1
+  password: prashanth320
 
 test:
   adapter: postgresql
   encoding: utf8
-  database: mailcheck_test
+  database: dailycheck_test
   host: localhost
   pool: 5
-  username: sairails
-  password: randomwalk893
+  username: dailycheck1
+  password: prashanth320
 
 production:
   adapter: postgresql
