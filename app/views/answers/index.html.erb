@@ -1,10 +1,10 @@
-<h1>Posts</h1>
+<h1>Updates</h1>
  
 <% if @answers.count > 0 %>
     <% @answers.each do |answer| %>
       <blockquote>
         <p><%= answer.name %></p>
-        <small><%= answer.email %></small>
+        <small><%= answer.answer %></small>
       </blockquote>
     <% end %>
 <% else %>
