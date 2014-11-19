@@ -5,7 +5,7 @@ class EmailProcessor
   end
 
   def process
-  	from =  @email.from.split.last.gsub((/[<>]/,''))
+  	from1 =  @email.from.split.last.gsub(/[<>]/,'')
   	@team_member = TeamMember.find_by(email: from)	
   	answer_form = @team_member.answer.build
   	answer_form.name = @team_member.name
