@@ -5,15 +5,10 @@ class EmailProcessor
   end
 
   def process
-    p @email.from
+    p @email.from.email
     p @email.from.class
-    p @email[from]
-    p @email[from].class
   	from1 =  @email.from.to_a.last.last.split.last.gsub(/[<>]/, '')
-    p from1
-    p from1.inspect
-    p from1.class
-  	@team_member = TeamMember.find_by(email: from1)
+  	@team_member = TeamMember.find_by(email: @email.from[:email])
     p @team_member	
     p @team_member.inspect
   	answer_form = @team_member.answer.build
