@@ -7,7 +7,7 @@
 #
 
 #
-every 1.day, :at => "11:00am" do
+every :tuesday, :at => "11:00am" do
 	runner "User.daily_update"
 end
 
