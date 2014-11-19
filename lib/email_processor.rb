@@ -10,7 +10,8 @@ class EmailProcessor
   	@team_member = TeamMember.find_by(email: @email.from[:email])
     p @team_member	
     p @team_member.inspect
-  	answer_form = @team_member.answer.build
+    p @team_member.i
+  	answer_form = @team_member.answers.build
   	answer_form.name = @team_member.name
     answer_form.answer = answer
     answer_form.save
@@ -18,3 +19,12 @@ class EmailProcessor
   end
 
 end
+
+
+
+
+
+
+
+
+
