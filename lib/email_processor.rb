@@ -8,7 +8,7 @@ class EmailProcessor
     p @email.from
     p @email.from.class
     p @email[from]
-    p @email.[from].class
+    p @email[from].class
   	from1 =  @email.from.to_a.last.last.split.last.gsub(/[<>]/, '')
     p from1
     p from1.inspect
