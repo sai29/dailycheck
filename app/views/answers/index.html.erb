@@ -1,7 +1,7 @@
 <h1>Updates</h1>
  
 <% if @answers.count > 0 %>
-    <% @answers.each do |answer| %>
+    <% @answers.map do |answer| %>
       <blockquote>
         <p><%= answer.name %></p>
         <small><%= answer.answers %></small>
