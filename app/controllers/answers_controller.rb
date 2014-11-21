@@ -3,7 +3,7 @@ class AnswersController < ApplicationController
 	
 	def index
 		@answers = current_user.team_members.each do |team_member|
-			team_member.answer.all
+			team_member.answers.all
 		end
 	end
   
