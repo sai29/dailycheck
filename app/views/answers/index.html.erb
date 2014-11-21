@@ -1,12 +1,17 @@
 <h1>Updates</h1>
- 
 <% if @answers.count > 0 %>
-    <% @answers.each do |answer| %>
+    <% <% @answers.each do |answer| %> %>
       <blockquote>
         <p><%= answer.name %></p>
-        <small><%= answer.answers %></small>
+        <small><%= answer.answer %></small>
       </blockquote>
     <% end %>
 <% else %>
   <p><em>Oops, doesn't look like there are any posts yet.</em></p>
 <% end %>
+
+
+
+
+
+

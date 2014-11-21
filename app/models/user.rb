@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :team_members
+  has_many :answers, :through => :team_member
 
   def self.daily_update
   	@users = User.all
