@@ -1,0 +1,21 @@
+
+<div class="row">
+
+	<div class="col-md-6 col-md-offset-3">
+		
+		<div class="jumbotron">
+			<h3>Add Question</h3>
+
+			<%= form_for(@question) do |f| %>
+			 <%= render 'shared/error_messages', object: f.object %>
+				<div class='input-group input-group-lg'> 
+				<%= f.label :question %>
+				<%= f.text_field :question, class:"form-control" %>
+	<br>
+				<%= f.submit "Add Question", class: "btn btn-large btn-primary" %>
+			<% end %>
+			</div>
+		</div>
+	</div>
+	
+</div>

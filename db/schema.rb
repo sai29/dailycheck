@@ -1,6 +1,6 @@
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
-# of editing this file, please use the migrations feature of Active Record to
+# of editing this fihele, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
 # Note that this schema.rb definition is the authoritative source for your
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118133533) do
+ActiveRecord::Schema.define(version: 20141210054037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20141118133533) do
   end
 
   add_index "answers", ["team_member_id"], name: "index_answers_on_team_member_id", using: :btree
+
+  create_table "questions", force: true do |t|
+    t.text     "question"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "questions", ["user_id"], name: "index_questions_on_user_id", using: :btree
 
   create_table "team_members", force: true do |t|
     t.string   "email"

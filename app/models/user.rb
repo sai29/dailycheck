@@ -5,13 +5,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :team_members
   has_many :answers, :through => :team_member
+  has_many :questions, dependent: :destroy
 
   def self.daily_update
   	@users = User.all
-  	@users.each do |user|
-  		user.team_members.each do |team_member|
-  			  DailyMailer.daily_mail(team_member.email).deliver
-  			end
+    @users.each do |user|
+      @questions = user.questions 
+      @team_members = user.team_members                                                                                         
+        DailyMailer.daily_mail(@questions, @team_members).deliver
+  		
   	end
   end
 end
